@@ -1,10 +1,10 @@
 package br.com.ada.projetofinal_pooii.controller;
-import br.com.ada.pooii_bianca.projetoPOOII.domain.BaseTask;
-import br.com.ada.pooii_bianca.projetoPOOII.domain.PersonalTask;
-import br.com.ada.pooii_bianca.projetoPOOII.domain.StudyTask;
-import br.com.ada.pooii_bianca.projetoPOOII.domain.WorkTask;
-import br.com.ada.pooii_bianca.projetoPOOII.repository.TaskRepository;
-import br.com.ada.pooii_bianca.projetoPOOII.service.TaskService;
+import br.com.ada.projetofinal_pooii.domain.BaseTask;
+import br.com.ada.projetofinal_pooii.domain.PersonalTask;
+import br.com.ada.projetofinal_pooii.domain.StudyTask;
+import br.com.ada.projetofinal_pooii.domain.WorkTask;
+import br.com.ada.projetofinal_pooii.repository.TaskRepository;
+import br.com.ada.projetofinal_pooii.service.TaskService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
