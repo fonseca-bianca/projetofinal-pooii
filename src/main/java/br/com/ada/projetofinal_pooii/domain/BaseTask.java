@@ -1,24 +1,24 @@
 package br.com.ada.projetofinal_pooii.domain;
-//Camada Domain: vai definir estruturas e regras de negócios das tarefas
 
 import java.util.Date;
 
-//BaseTask é a class que faz a representação de dados (Domínio = tarefa: título, descrição e prazo)
-//classe SUPER:
-public class BaseTask {
+public abstract class BaseTask {
     private String title;
     private String description;
     private Date deadline;
 
-    //Construtor, getters e setters:
+    public BaseTask(){
 
-    public BaseTask(String title, String description, Date deadline) {
+    }
+
+    public BaseTask(String title, String description, Date deadline){
         this.title = title;
         this.description = description;
         this.deadline = deadline;
     }
 
-    public String getTitle() {
+    //getters e setters:
+    public String getTitle(){
         return title;
     }
 
@@ -26,7 +26,7 @@ public class BaseTask {
         this.title = title;
     }
 
-    public String getDescription() {
+    public String getDescription(){
         return description;
     }
 
@@ -34,7 +34,7 @@ public class BaseTask {
         this.description = description;
     }
 
-    public Date getDeadline() {
+    public Date getDeadline(){
         return deadline;
     }
 
