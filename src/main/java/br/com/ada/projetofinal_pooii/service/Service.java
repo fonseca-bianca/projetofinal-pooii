@@ -2,16 +2,20 @@ package br.com.ada.projetofinal_pooii.service;
 
 import br.com.ada.projetofinal_pooii.domain.BaseTask;
 import br.com.ada.projetofinal_pooii.repository.Repository;
+import br.com.ada.projetofinal_pooii.repository.RepositoryConcreta;
+import br.com.ada.projetofinal_pooii.repository.RepositoryInterface;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 //classe Service depende da classe Repository pra fazer o CRUD das tarefas
 public class Service {
-    private final Repository repository;
 
-    public Service(Repository repository){
-        this.repository = repository;
+    private final RepositoryInterface repository;
+
+    public Service(Scanner scanner){
+        this.repository = new RepositoryConcreta();
     }
 
 
