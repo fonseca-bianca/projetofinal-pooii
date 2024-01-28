@@ -61,6 +61,7 @@ public class Controller {
                     break;
                 case 5:
                     System.out.println("O programa será encerrado.");
+                    return;
                 default:
                     System.out.println("Operação inválida. Digite um número válido para acessar suas tarefas.");
             }
@@ -139,7 +140,7 @@ public class Controller {
         // Se a tarefa não existir, imprime uma mensagem de erro e retorna
         if (taskToUpdate == null) {
             System.out.println("A tarefa não pode ser atualizada, pois a lista está vazia");
-            return;
+            //return;
         }
 
         // 2. Verifica se a nova descrição da tarefa é diferente da anterior
@@ -149,29 +150,27 @@ public class Controller {
         // Se a nova descrição for vazia, imprime uma mensagem de erro e retorna
         if (newDescription.isEmpty()) {
             System.out.println("A nova descrição não pode ser vazia.");
-            return;
+            //return;
         }
 
         // Se a nova descrição é diferente da anterior, imprime uma mensagem de sucesso
         if (!newDescription.equals(taskToUpdate.getDescription())) {
             taskToUpdate.setDescription(newDescription);
             System.out.println("A tarefa foi atualizada com sucesso!");
+            return;
             //Retorna lista de opções pro usário:
-            System.out.println("Digite o número desejado conforme a tarefa que pretende realizar:");
-            System.out.println("1. Adicionar uma tarefa");
-            System.out.println("2. Remover uma tarefa");
-            System.out.println("3. Atualizar uma tarefa");
-            System.out.println("4. Listar todas as tarefas");
-            System.out.println("5. Sair do programa");
+
         } else {
             // Se a nova descrição é igual à anterior, imprime uma mensagem de aviso
             System.out.println("A nova descrição é a mesma da descrição anterior.");
-        }
 
-        // Atualiza a descrição da tarefa
+        }
+        //Atualiza a descrição da tarefa
         taskToUpdate.setDescription(newDescription);
         service.updateTask(taskToUpdate);
+
     }
+
 
 
 
