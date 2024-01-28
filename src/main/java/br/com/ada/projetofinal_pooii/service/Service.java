@@ -12,9 +12,11 @@ import java.util.Scanner;
 //classe Service depende da classe Repository pra fazer o CRUD das tarefas
 public class Service {
 
+    private final List<BaseTask> tasks = new ArrayList<>(); //lista q irá armazenar as tarefas
     private final RepositoryInterface repository;
 
     public Service(Scanner scanner){
+
         this.repository = new RepositoryConcreta();
     }
 
@@ -22,10 +24,12 @@ public class Service {
     //Métodos da classe Service que chamam os métodos correspondentes na classe Repository
     public void addTask(BaseTask task){
         repository.addTask(task);
+        tasks.add(task);
     }
 
     public void removeTask(BaseTask task){
         repository.removeTask(task);
+        tasks.remove(task);
     }
 
     public void updateTask(BaseTask task){
@@ -33,16 +37,25 @@ public class Service {
     }
 
     public List<BaseTask> getTasks(){
-        return repository.getTasks();
+        return tasks;
+        //return repository.getTasks();
     }
 
-    public List<BaseTask> getTasksByTitle(String title){
-        List<BaseTask> tasks = new ArrayList<>();
-        for(BaseTask task : tasks){
-            if(task.getTitle().equals(title)){
-                tasks.add(task);
+    public BaseTask getTasksByTitle(String title){
+        //List<BaseTask> tasks = new ArrayList<>();
+        for(BaseTask task : tasks) {
+            if (task.getTitle().equals(title)) {
+                //tasks.add(task);
+                return task;
             }
         }
+            return null;
+        }
+        //return tasks;
+
+    public List<BaseTask> saveTask(BaseTask task) {
+        tasks.add(task);
         return tasks;
+
     }
 }

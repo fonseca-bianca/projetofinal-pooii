@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="205bf802-823b-4485-b544-11723d14faee" name="Changes" comment="Enviando alterações do repositório local pro repositório remoto.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/RepositoryConcreta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/RepositoryInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/service/Service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +103,7 @@
       <updated>1706115620100</updated>
       <workItem from="1706115621163" duration="169000" />
       <workItem from="1706115973462" duration="10157000" />
-      <workItem from="1706219272437" duration="42698000" />
+      <workItem from="1706219272437" duration="64524000" />
     </task>
     <task id="LOCAL-00001" summary="Enviando alterações do repositório local pro repositório remoto.">
       <option name="closed" value="true" />
@@ -134,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706290937888</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Enviando alterações do repositório local pro repositório remoto.">
+      <option name="closed" value="true" />
+      <created>1706388503595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706388503595</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
