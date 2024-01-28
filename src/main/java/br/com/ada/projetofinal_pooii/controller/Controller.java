@@ -129,13 +129,14 @@ public class Controller {
     }
 
     private void updateTask() {
-
         System.out.println("Informe o título da tarefa a ser atualizada: ");
         //Scanner scanner = new Scanner(System.in);
         String title = scanner.nextLine();
 
         // 1. Verifica se a tarefa existe
         BaseTask taskToUpdate = service.getTasksByTitle(title);
+
+        // Se a tarefa não existir, imprime uma mensagem de erro e retorna
         if (taskToUpdate == null) {
             System.out.println("A tarefa não pode ser atualizada, pois a lista está vazia");
             return;
@@ -145,11 +146,26 @@ public class Controller {
         System.out.println("Digite a nova descrição da tarefa: ");
         String newDescription = scanner.nextLine();
 
-        // 3. Atualiza a descrição da tarefa:
+        // Se a nova descrição for vazia, imprime uma mensagem de erro e retorna
+        if (newDescription.isEmpty()) {
+            System.out.println("A nova descrição não pode ser vazia.");
+            return;
+        }
+
+        // Se a nova descrição é diferente da anterior, imprime uma mensagem de sucesso
+        if (!newDescription.equals(taskToUpdate.getDescription())) {
+            System.out.println("A tarefa foi atualizada com sucesso!");
+        } else {
+            // Se a nova descrição é igual à anterior, imprime uma mensagem de aviso
+            System.out.println("A nova descrição é a mesma da descrição anterior.");
+        }
+
+        // Atualiza a descrição da tarefa
         taskToUpdate.setDescription(newDescription);
         service.updateTask(taskToUpdate);
-        System.out.println("A tarefa foi atualizada com sucesso");
     }
+
+
 
         //List<BaseTask> tasks = service.getTasksByTitle(title);
         //BaseTask taskToUpdate = service.getTasksByTitle(title);
