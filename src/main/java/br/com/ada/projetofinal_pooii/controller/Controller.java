@@ -154,7 +154,15 @@ public class Controller {
 
         // Se a nova descrição é diferente da anterior, imprime uma mensagem de sucesso
         if (!newDescription.equals(taskToUpdate.getDescription())) {
+            taskToUpdate.setDescription(newDescription);
             System.out.println("A tarefa foi atualizada com sucesso!");
+            //Retorna lista de opções pro usário:
+            System.out.println("Digite o número desejado conforme a tarefa que pretende realizar:");
+            System.out.println("1. Adicionar uma tarefa");
+            System.out.println("2. Remover uma tarefa");
+            System.out.println("3. Atualizar uma tarefa");
+            System.out.println("4. Listar todas as tarefas");
+            System.out.println("5. Sair do programa");
         } else {
             // Se a nova descrição é igual à anterior, imprime uma mensagem de aviso
             System.out.println("A nova descrição é a mesma da descrição anterior.");
