@@ -8,7 +8,6 @@ public abstract class BaseTask {
     private Date deadline;
 
     public BaseTask(){
-
     }
 
     public BaseTask(String title, String description, Date deadline){

@@ -16,7 +16,6 @@ public class Service {
     private final RepositoryInterface repository;
 
     public Service(Scanner scanner){
-
         this.repository = new RepositoryConcreta();
     }
 
@@ -38,24 +37,20 @@ public class Service {
 
     public List<BaseTask> getTasks(){
         return tasks;
-        //return repository.getTasks();
     }
 
     public BaseTask getTasksByTitle(String title){
-        //List<BaseTask> tasks = new ArrayList<>();
         for(BaseTask task : tasks) {
             if (task.getTitle().equals(title)) {
-                //tasks.add(task);
                 return task;
             }
         }
             return null;
         }
-        //return tasks;
+
 
     public List<BaseTask> saveTask(BaseTask task) {
         tasks.add(task);
         return tasks;
-
     }
 }

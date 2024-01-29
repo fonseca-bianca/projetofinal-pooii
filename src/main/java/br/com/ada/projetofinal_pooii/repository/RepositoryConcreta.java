@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class RepositoryConcreta extends Repository{
 
     public RepositoryConcreta(){
-
     }
     private List<BaseTask> tasks = new ArrayList<>();
 
@@ -29,6 +28,5 @@ public class RepositoryConcreta extends Repository{
     @Override
     public List<BaseTask> getTasks(){
         return tasks;
-
     }
 }

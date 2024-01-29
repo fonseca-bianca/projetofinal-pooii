@@ -5,13 +5,13 @@ import br.com.ada.projetofinal_pooii.domain.BaseTask;
 import java.time.LocalDate;
 import java.util.List;
 
-public interface RepositoryInterface {
-    void addTask(BaseTask task);
+//Interface Generics
+public interface RepositoryInterface<T extends BaseTask> {
+    void addTask(T task);
 
-    void removeTask(BaseTask task);
+    void removeTask(T task);
 
-    void updateTask(BaseTask task);
+    void updateTask(T task);
 
-    List<BaseTask> getTasks();
-
+    List<T> getTasks();
 }

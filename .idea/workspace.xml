@@ -7,6 +7,15 @@
     <list default="true" id="205bf802-823b-4485-b544-11723d14faee" name="Changes" comment="Enviando alterações do repositório local pro repositório remoto.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/BaseTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/BaseTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/PersonalTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/PersonalTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/StudyTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/StudyTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/WorkTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/domain/WorkTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/RepositoryConcreta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/RepositoryConcreta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/RepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/repository/RepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/ada/projetofinal_pooii/service/Service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +111,7 @@
       <updated>1706115620100</updated>
       <workItem from="1706115621163" duration="169000" />
       <workItem from="1706115973462" duration="10157000" />
-      <workItem from="1706219272437" duration="73372000" />
+      <workItem from="1706219272437" duration="79521000" />
     </task>
     <task id="LOCAL-00001" summary="Enviando alterações do repositório local pro repositório remoto.">
       <option name="closed" value="true" />
@@ -160,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706476363107</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Enviando alterações do repositório local pro repositório remoto.">
+      <option name="closed" value="true" />
+      <created>1706479995783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706479995783</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

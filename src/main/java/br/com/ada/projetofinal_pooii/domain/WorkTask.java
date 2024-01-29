@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class WorkTask extends BaseTask{
     public WorkTask(){
-
     }
 
     public WorkTask(String title, String description, Date deadline){

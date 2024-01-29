@@ -15,9 +15,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-
-
-public class Controller {
+public class Controller{
 
     private Service service;
     private Scanner scanner;
@@ -71,14 +69,14 @@ public class Controller {
     private void addTask() {
 
         System.out.println("Informe o título da sua tarefa: ");
-        //Scanner scanner = new Scanner(System.in);
+
         String title = scanner.nextLine();
 
         System.out.println("Informe a descrição da sua tarefa: ");
         String description = scanner.nextLine();
 
         System.out.println("Informe a data para realizar a sua tarefa: ");
-        String deadlineStr = scanner.nextLine(); //
+        String deadlineStr = scanner.nextLine();
 
         LocalDate deadline;
 
@@ -88,13 +86,8 @@ public class Controller {
             System.out.println("O formato da data é inválido!");
             return;
         }
-        //ver aq
-        //Date deadline = new Date();
-        BaseTask task = new PersonalTask(title, description, Date.from(deadline.atStartOfDay(ZoneId.systemDefault()).toInstant()));
-        //service.addTask(task);
 
-        //service.addTask(task);
-        //service.saveTask(task);
+        BaseTask task = new PersonalTask(title, description, Date.from(deadline.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 
         List<BaseTask> tasks = service.saveTask(task);
 
@@ -104,25 +97,14 @@ public class Controller {
     private void removeTask() {
 
         System.out.println("Informe o título da tarefa que deseja remover da lista: ");
-        //Scanner scanner = new Scanner(System.in);
+
         String title = scanner.nextLine();
 
-        //if(title.isEmpty()){
-        //System.out.println("Digite o novo título para a sua tarefa");
-        //return;
-
-        //}
-        //Task task = new Task("","", null);
-        //task.setTitle(title);
-
-
-        //List<BaseTask> tasks = service.getTasksByTitle(title);
         BaseTask taskToRemove = service.getTasksByTitle(title);
         if (taskToRemove == null) {
             System.out.println("A tarefa não pode ser encontrada, pois a lista está vazia");
             //return;
         } else {
-            //BaseTask taskToRemove = tasks.get(0);
             service.removeTask(taskToRemove);
             service.removeTask(taskToRemove);
             System.out.println("A tarefa foi removida!");
@@ -131,7 +113,7 @@ public class Controller {
 
     private void updateTask() {
         System.out.println("Informe o título da tarefa a ser atualizada: ");
-        //Scanner scanner = new Scanner(System.in);
+
         String title = scanner.nextLine();
 
         // 1. Verifica se a tarefa existe
@@ -140,7 +122,6 @@ public class Controller {
         // Se a tarefa não existir, imprime uma mensagem de erro e retorna
         if (taskToUpdate == null) {
             System.out.println("A tarefa não pode ser atualizada, pois a lista está vazia");
-            //return;
         }
 
         // 2. Verifica se a nova descrição da tarefa é diferente da anterior
@@ -150,7 +131,6 @@ public class Controller {
         // Se a nova descrição for vazia, imprime uma mensagem de erro e retorna
         if (newDescription.isEmpty()) {
             System.out.println("A nova descrição não pode ser vazia.");
-            //return;
         }
 
         // Se a nova descrição é diferente da anterior, imprime uma mensagem de sucesso
@@ -168,90 +148,9 @@ public class Controller {
         //Atualiza a descrição da tarefa
         taskToUpdate.setDescription(newDescription);
         service.updateTask(taskToUpdate);
-
     }
 
-
-
-
-        //List<BaseTask> tasks = service.getTasksByTitle(title);
-        //BaseTask taskToUpdate = service.getTasksByTitle(title);
-        //if (taskToUpdate == null) {
-          //  System.out.println("A tarefa não pode ser atualizada, pois a lista está vazia");
-          //  return;
-        //}
-
-        //BaseTask taskToUpdate = tasks.get(0);
-       // System.out.println("Digite o novo título para a sua tarefa");
-       // String newTitle = scanner.nextLine();
-
-       // if(newTitle.isEmpty()){
-           // System.out.println("O título não pode ser vazio");
-       // } else {
-       // boolean isSameTitle = taskToUpdate.getTitle().equals(newTitle);
-
-
-      //  if (isSameTitle) {
-        //    System.out.println("Você está tentando atualizar um título com o mesmo nome do título que já está armazenado");
-       // } else {
-           // taskToUpdate.setTitle(newTitle);
-        //    service.updateTask(taskToUpdate);
-         //   System.out.println("A tarefa foi atualiza com sucesso");
-      //  }
-  //  }
-
-
-        //taskToUpdate.setTitle(newTitle);
-        //service.updateTask(taskToUpdate);
-       // System.out.println("A tarefa foi atualizada com sucesso!");
-    //if(tasks.isEmpty()){
-    // System.out.println("A tarefa não foi encontrada");
-    // } else{
-    // this.service.updateTask(taskToUpdate);
-    // System.out.println("A tarefa foi atualizada com sucesso!");
-
-    // List<BaseTask> tasks = this.service.getTasksByTitle(title);
-    //if (tasks.isEmpty()) {
-    // System.out.println("A tarefa não pode ser encontrada");
-    //return;
-    // } else {
-
-    //  this.service.updateTask(title);
-    //  System.out.println("A tarefa foi atualizada com sucesso!");
-    //  }
-
-    //System.out.println("Informe o título da nova tarefa a ser incluída: ");
-    // String newTitle = scanner.nextLine();
-
-    // System.out.println("Informe a descrição da nova tarefa a ser incluída: ");
-    // String newDescription = scanner.nextLine();
-
-    //  System.out.println("Informe a data para realização da nova tarefa a ser incluída: ");
-    //  String deadlineStr = scanner.nextLine();
-
-    //  Date newDeadline = new Date();
-    //  LocalDate deadline; //variável declarada
-
-    //  try {
-    //   deadline = LocalDate.parse(deadlineStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    //  } catch (DateTimeParseException e) {
-    //     System.out.println("A data digitada é inválida");
-    //return;
-    //  }
-
-    //Date newDeadlineDate = Date.from(newDeadline.atStartOfDay(ZoneId.systemDefault()).toInstant());
-
-    // tasks.get(0).setTitle(newTitle);
-    //  tasks.get(0).setDescription(newDescription);
-    // tasks.get(0).setDeadline(Date.from(deadline.atStartOfDay(ZoneId.systemDefault()).toInstant()));
-
-    //  service.updateTask(tasks.get(0));
-    //  System.out.println("A tarefa foi removida");
-    //   }
-
     private List<BaseTask> listTasks() {
-
-        //this.scanner = new Scanner(System.in);
 
         List<BaseTask> tasks = service.getTasks();
 
